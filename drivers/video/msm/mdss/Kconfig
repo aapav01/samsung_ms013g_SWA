@@ -275,6 +275,7 @@ config TC358764_I2C_CONTROL
 	default n
 	---help---
 	The TOSHIBA I2C CONTROLLER support
+
 config LCD_FORCE_VIDEO_MODE
 	bool "forcing video mode on cmd panle"
 	default n
@@ -331,3 +332,7 @@ config MDP_NEGATIVE_SUPPORT
 	bool "Support MDP negative color"
 	default n
 
+config LCD_KCAL
+	depends on FB_MSM_MDSS
+	bool "Enable sysfs for LCD KCAL"
+	default n
