@@ -43,6 +43,10 @@ static struct mdss_dsi_driver_data msd;
 #endif	/* CONFIG_MDNIE_LITE_TUNING */
 #endif	/* CONFIG_FB_MSM_MDSS_MDP3 */
 
+#ifdef CONFIG_POWERSUSPEND
+#include <linux/powersuspend.h>
+#endif
+
 #define DT_CMD_HDR 6
 
 DEFINE_LED_TRIGGER(bl_led_trigger);
@@ -407,6 +411,10 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 		return -EINVAL;
 	}
 
+#ifdef CONFIG_POWERSUSPEND
+	set_power_suspend_state_pannel_hook(POWER_SUSPEND_INACTIVE);
+#endif
+
 	ctrl = container_of(pdata, struct mdss_dsi_ctrl_pdata,
 				panel_data);
 	mipi  = &pdata->panel_info.mipi;
@@ -450,6 +458,10 @@ static int mdss_dsi_panel_off(struct mdss_panel_data *pdata)
 #if defined(CONFIG_FB_MSM_MDSS_MDP3)
 	msd.mfd->resume_state = MIPI_SUSPEND_STATE;
 #endif
+#endif
+
+#ifdef CONFIG_POWERSUSPEND
+	set_power_suspend_state_pannel_hook(POWER_SUSPEND_ACTIVE);
 #endif
 
 	pr_debug("%s:-\n", __func__);
