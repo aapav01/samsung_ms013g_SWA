@@ -95,3 +95,4 @@ obj-$(CONFIG_SEC_FPGA_ICE40XX)	+= ice40xx.o
 obj-$(CONFIG_TIMA_LOG)		+= tima_debug_log.o
 obj-$(CONFIG_CHECK_SIMSLOT_COUNT) += sim_slot.o
 obj-$(CONFIG_SEC_MODEM) += modem_if/
+obj-$(CONFIG_HPH_HIGH_PERF) += sound_control.o
