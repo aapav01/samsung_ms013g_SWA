@@ -523,4 +523,4 @@ obj-$(CONFIG_SEC_THERMISTOR) += sec_thermistor.o msm8974-thermistor.o
 endif
 obj-$(CONFIG_GSM_MODEM_SPRD6500) += board-sprd6500-spi.o board-sprd6500-modems.o
 
-obj-$(CONFIG_LCD_KCAL) += board_kcal.o kcal_ctrl.o
+obj-$(CONFIG_LCD_KCAL) += kcal_ctrl.o
