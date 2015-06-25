@@ -12,4 +12,4 @@ tools/dtbTool -s 2048 -o output/arch/arm/boot/dt.img -p output/scripts/dtc/ outp
 cp -v output/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 
 mkdir out_modules
-find ./ -name "*.ko" -exec cp {} out_modules \;
+find ./ -name "*.ko" -exec cp -fv {} out_modules \;
