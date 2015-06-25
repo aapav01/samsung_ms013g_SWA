@@ -2221,7 +2221,7 @@ static int bt532_ts_suspend(struct device *dev)
 	struct bt532_ts_info *info = i2c_get_clientdata(client);
 
 #ifdef CONFIG_TOUCHSCREEN_PREVENT_SLEEP
-	if ((s2w_switch > 0) || (dt2w_switch > 0)) {
+	if ((s2w_switch == 1) || (dt2w_switch)) {
 		pr_info("suspend avoided!\n");
 		return 0;
 	} else {
