@@ -3485,11 +3485,26 @@ config MSM_DEVFREQ_CPUBW
 	  agnostic interface to so that some of the devfreq governors can be
 	  shared across SoCs.
 
-config CPU_UNDERCLOCK
-	bool "enable CPU underclocking option"
+menu "CLOCKING and UNDERVOLTING"
+	 
+config CPU_OVERCLOCK
+	bool "enable CPU overclocking of Cortex A7"
 	default n
 	help
-	  Enable CPU underclocking to 96Mhz
+	  Simple CPU Overclocking Option to 1.6 GHz
+
+config CPU_UNDERCLOCK
+	bool "enable CPU underclocking of Cortex A7"
+	default n
+	help
+	   Enable CPU underclocking to 96Mhz
+
+config USERSPACE_VOLTAGE_CONTROL
+	bool "enable USERSPACE_VOLTAGE_CONTROL"
+	default n
+	help
+	   This is a test for voltage control
+endmenu
 
 config MSM_AVS_HW
 	bool "Enable Adaptive Voltage Scaling (AVS)"
