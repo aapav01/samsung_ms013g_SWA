@@ -1108,8 +1108,11 @@ This is causing conflict to IRLED driver in Millet Wifi US Open and thus disabli
 			<1401600000 10>,
 			<1497600000 11>,
 			<1593600000 12>;
-
-		cpu-vdd-supply = <&apc_vreg_corner>;
+		/*
+		 *If Userspace Voltage Control is disabled, change this to
+		 *<&apc_vreg_corner>;
+		 */
+		cpu-vdd-supply = <&pm8226_s2>;
 	};
 
 	qcom,cpubw {
