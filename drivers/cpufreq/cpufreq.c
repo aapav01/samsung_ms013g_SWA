@@ -1767,7 +1767,7 @@ EXPORT_SYMBOL(cpufreq_get_policy);
  * data   : current policy.
  * policy : policy to be set.
  */
-#define FIXED_MIN_FREQ	300000
+#define FIXED_MIN_FREQ	192000
 static int __cpufreq_set_policy(struct cpufreq_policy *data,
 				struct cpufreq_policy *policy)
 {
