@@ -1,3 +1,6 @@
+
+EXTRA_CFLAGS += -Wno-array-bounds
+
 ifeq ($(TARGET_BUILD_VARIANT),user)
 EXTRA_CFLAGS += -DDLOG_USER_VARIANT
 endif
