@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export ARCH=arm
-export CROSS_COMPILE=~/kernel/arm-eabi-4.8/bin/arm-eabi-
+export CROSS_COMPILE=~/working/kernel/arm-eabi-linaro-4.7.4/bin/arm-eabi-
 mkdir output
 
 make -C $(pwd) O=output VARIANT_DEFCONFIG=ms013g_defconfig ms013g_tubro_defconfig SELINUX_DEFCONFIG=selinux_defconfig
