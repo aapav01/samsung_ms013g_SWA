@@ -4291,7 +4291,7 @@ CONFIG_QMI_ENCDEC=y
 #
 # @aapav01 - Tubro Kernel - Extra
 #
-CT_ARCH_ARCH="arm"
+CT_ARCH_ARCH=""
 CT_ARCH_CPU="cortex-a7"
 CT_ARCH_TUNE="cortex-a7"
 CT_ARCH_FPU="neon-vfpv4"

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 export ARCH=arm
-export CROSS_COMPILE=~/working/kernel/arm-eabi-linaro-4.7.4/bin/arm-eabi-
+export CROSS_COMPILE=~/working/kernel/arm-linux-gnueabihf-linaro-4.9.4/bin/arm-cortex_a7-linux-gnueabihf-
+#export CROSS_COMPILE=~/working/kernel/arm-linux-gnueabihf-linaro-4.9.4/bin/arm-eabi-
 mkdir output
 
 make -C $(pwd) O=output ms013g_tubro_defconfig $1
