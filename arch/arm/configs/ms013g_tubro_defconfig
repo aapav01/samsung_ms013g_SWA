@@ -4055,6 +4055,8 @@ CONFIG_DEBUG_USER=y
 # CONFIG_DEBUG_LL is not set
 # CONFIG_ARM_KPROBES_TEST is not set
 
+CONFIG_LTO=y
+
 #
 # Samsung Debugging Feature
 #
