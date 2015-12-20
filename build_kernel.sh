@@ -4,7 +4,7 @@ export ARCH=arm
 export CROSS_COMPILE=~/working/kernel/arm-eabi-linaro-4.7.4/bin/arm-eabi-
 mkdir output
 
-make -C $(pwd) O=output VARIANT_DEFCONFIG=ms013g_defconfig ms013g_tubro_defconfig SELINUX_DEFCONFIG=selinux_defconfig
+make -C $(pwd) O=output ms013g_tubro_defconfig
 make -C $(pwd) O=output
 
 tools/dtbTool -s 2048 -o output/arch/arm/boot/dt.img -p output/scripts/dtc/ output/arch/arm/boot/
