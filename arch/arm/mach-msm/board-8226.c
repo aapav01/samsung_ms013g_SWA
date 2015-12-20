@@ -335,7 +335,7 @@ void __init msm8226_add_drivers(void)
 	platform_device_register(&sec_device_thermistor);
 #endif
 #endif
-#ifndef CONFIG_INTELLI_THERMAL || CONFIG_INTELLI_THERMAL_V2
+#if !defined(CONFIG_INTELLI_THERMAL) || !defined(CONFIG_INTELLI_THERMAL_V2)
 	msm_thermal_device_init();
 #endif
 #ifdef CONFIG_LCD_KCAL
