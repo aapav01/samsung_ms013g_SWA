@@ -4,8 +4,8 @@ export ARCH=arm
 export CROSS_COMPILE=~/working/kernel/arm-eabi-linaro-4.7.4/bin/arm-eabi-
 mkdir output
 
-make -C $(pwd) O=output ms013g_tubro_defconfig
-make -C $(pwd) O=output
+make -C $(pwd) O=output ms013g_tubro_defconfig $1
+make -C $(pwd) O=output $1
 
 tools/dtbTool -s 2048 -o output/arch/arm/boot/dt.img -p output/scripts/dtc/ output/arch/arm/boot/
 

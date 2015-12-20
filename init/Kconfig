@@ -1465,4 +1465,7 @@ config PADATA
 	depends on SMP
 	bool
 
+config LTO
+	bool "Optimize with LTO GCC"
+
 source "kernel/Kconfig.locks"
