@@ -30,8 +30,6 @@ choice
 		bool "S.LSI"
 	config MTV_MARVELL
 		bool "Marvell"
-	config MTV_BROADCOM
-		bool "Broadcom"
 endchoice
 
 choice

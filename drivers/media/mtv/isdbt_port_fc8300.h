@@ -7,7 +7,7 @@ extern "C" {
 #endif
 
 #include "isdbt.h"
-#include "fc8300/fc8300.h"
+#include "fc8300.h"
 
 
 #ifdef __cplusplus
